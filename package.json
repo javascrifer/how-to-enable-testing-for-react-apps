@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@shopify/eslint-plugin": "^41.2.1",
+    "eslint": "^8.15.0"
   }
 }
