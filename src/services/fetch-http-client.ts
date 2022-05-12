@@ -48,6 +48,10 @@ export class FetchHttpClient implements HttpClient {
       headers,
     });
 
+    if (!response.ok) {
+      throw new Error('HTTP request failed');
+    }
+
     return response.json();
   }
 }

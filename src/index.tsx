@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 import App from './App';
+import { HttpClientProvider } from './providers/http-client';
+import { FetchHttpClient } from './services/fetch-http-client';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
+const fetchHttpClient = new FetchHttpClient();
 
 root.render(
   <React.StrictMode>
-    <App />
+    <HttpClientProvider httpClient={fetchHttpClient}>
+      <App />
+    </HttpClientProvider>
   </React.StrictMode>
 );
 
