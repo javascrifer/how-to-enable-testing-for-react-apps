@@ -36,7 +36,7 @@ export const SearchForm: FC<SearchFormProps> = ({ onSubmit }) => {
         onChange={handleEmailChange}
       />
       <button type="submit" disabled={email.length === 0 || isLoading}>
-        Subscribe
+        Search
       </button>
     </form>
   );
